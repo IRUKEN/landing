@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/i18next@21.6.13/dist/umd/i18next.min.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -12,8 +14,9 @@
       <img class="logo" src="./assets/logo.svg" alt="logo" />
       <img class="logo-sm" src="./assets/mobile-logo.svg" alt="mobile logo" />
       <div class="nav-cta-container">
-        <span class="number">+12 123 89795</span>
-        <button class="nav-cta">Contáctame</button>
+        <span class="number">+506 86536122</span>
+        <button class="nav-cta" data-i18n="contact-me">Contáctame</button>
+        <button class="lang-switch" onclick="switchLanguage()">EN</button>
       </div>
     </nav>
     <main>
@@ -27,15 +30,11 @@
         <div class="title">
           <h6 class="sub-heading">FullStack Developer</h6>
           <h1 class="intro">
-            Hola, soy <span class="blue-text">Erni Tabash</span>
+            <span data-i18n="greeting">Hola, soy</span> <span class="blue-text">Erni Tabash</span>
           </h1>
         </div>
-        <p class="text">
-          Hola, mi nombre es Erni Tabash, un desarrollador con enfoque en
-          soluciones web y experiencia en una amplia gama de tecnologías. Tengo
-          29 años y resido en <span class="text-bold">Limón, Costa Rica</span>.
-          Me especializo en crear experiencias de usuario intuitivas y
-          eficientes, orientadas principalmente al mercado B2B.
+        <p class="text" data-i18n="intro-text">
+          
         </p>
         <div class="btn-container">
           <button class="btn-primary">Call to Action1</button>

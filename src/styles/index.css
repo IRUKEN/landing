@@ -1,0 +1,9 @@
+/* Font imports MUST come first before any other CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+
+/* Custom overrides */
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+

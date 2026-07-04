@@ -1,0 +1,6 @@
+/* Font family definitions using fonts imported in index.css */
+:root {
+  /* Override Astra UI's default Instrument Sans with premium fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+}

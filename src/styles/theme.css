@@ -2,10 +2,10 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: #1E293B;
+  --card-foreground: #F8FAFC;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #030213;
@@ -105,6 +105,33 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-tertiary: var(--brand-tertiary);
+  --color-surface-bg: var(--surface-bg);
+  --color-surface-secondary-bg: var(--surface-secondary-bg);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-dark: var(--surface-dark);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-selected: var(--border-selected);
+  --color-bg-faint: var(--bg-faint);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-hover: var(--bg-hover);
+  --color-on-brand: var(--on-brand);
+  --color-on-reverse: var(--on-reverse);
+  --font-display: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'SFMono-Regular', 'Cascadia Code', 'Liberation Mono', Consolas, monospace;
+  --text-label: 0.875rem;
+  --text-label--line-height: 1.25rem;
+  --text-label-sm: 0.75rem;
+  --text-label-sm--line-height: 1rem;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -254,4 +281,22 @@ section {
   .bg-gradient-radial {
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
+}
+
+/* Astra/Figma compatibility layer for production builds without @figma/astraui. */
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--brand-tertiary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--brand-secondary);
+  color: var(--text-primary);
 }

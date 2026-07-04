@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/50 via-transparent to-[#020617]/70" />
       </div>
 
-      {/* Architectural drafting overlay — pure geometry, no labels */}
+      {/* Architectural drafting overlay - pure geometry, no labels */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         <svg width="100%" height="100%" className="absolute inset-0" preserveAspectRatio="none">
           <defs>
@@ -26,7 +26,7 @@ export function HeroSection() {
             </filter>
           </defs>
 
-          {/* Structural border rectangle — offset from edges */}
+          {/* Structural border rectangle - offset from edges */}
           <motion.rect
             x="3%" y="4%"
             width="94%" height="92%"
@@ -39,7 +39,7 @@ export function HeroSection() {
             transition={{ duration: 2, delay: 1.8 }}
           />
 
-          {/* Horizontal guide — upper third */}
+          {/* Horizontal guide - upper third */}
           <motion.line
             x1="3%" y1="28%" x2="97%" y2="28%"
             stroke="var(--border-primary)"
@@ -51,7 +51,7 @@ export function HeroSection() {
             transition={{ duration: 2.5, delay: 2 }}
           />
 
-          {/* Vertical guide — right third */}
+          {/* Vertical guide - right third */}
           <motion.line
             x1="68%" y1="4%" x2="68%" y2="96%"
             stroke="var(--border-primary)"
@@ -63,9 +63,9 @@ export function HeroSection() {
             transition={{ duration: 2.5, delay: 2.2 }}
           />
 
-          {/* Compass arc — bottom right area */}
+          {/* Compass arc - bottom right area */}
           <motion.path
-            d="M 85% 88% A 80 80 0 0 0 72% 96%"
+            d="M 1224 880 A 120 120 0 0 0 1037 960"
             fill="none"
             stroke="var(--brand-primary)"
             strokeWidth="0.6"
@@ -105,7 +105,7 @@ export function HeroSection() {
           </motion.g>
         </svg>
 
-        {/* Corner coordinate markers — typographic decoration only */}
+        {/* Corner coordinate markers - typographic decoration only */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -113,8 +113,8 @@ export function HeroSection() {
           className="absolute top-8 right-8 text-right"
         >
           <div className="font-mono text-[10px] text-text-tertiary/40 tracking-widest leading-relaxed">
-            47.2° N<br />
-            122.0° W
+            47.2 deg N<br />
+            122.0 deg W
           </div>
         </motion.div>
 
@@ -175,7 +175,7 @@ export function HeroSection() {
               to complexity.
             </motion.p>
 
-            {/* Single CTA — understated */}
+            {/* Single CTA - understated */}
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

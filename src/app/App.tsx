@@ -8,14 +8,15 @@ import { ContactSection } from './components/sections/ContactSection'
 
 export default function App() {
   return (
-    <PageLayout>
+    <div className="dark min-h-screen bg-brand-tertiary text-text-primary">
+      <PageLayout>
         <HeroSection />
         <AboutSection />
         <ImpactSection />
         <SystemsSection />
         <PhilosophySection />
         <ContactSection />
-    </PageLayout>
+      </PageLayout>
+    </div>
   )
 }
-

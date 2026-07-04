@@ -6,8 +6,8 @@ const contacts = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'contact@tabashsequeira.com',
-    href: 'mailto:contact@tabashsequeira.com'
+    value: 'ernitabash01@gmail.com',
+    href: 'mailto:ernitabash01@gmail.com'
   },
   {
     icon: Linkedin,
@@ -49,7 +49,7 @@ export function ContactSection() {
             </span>
           </div>
 
-          {/* Closing statement — the last page of the book */}
+          {/* Closing statement - the last page of the book */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -73,11 +73,11 @@ export function ContactSection() {
             style={{ fontSize: 'clamp(0.95rem, 1.3vw, 1.1rem)' }}
           >
             Whether the challenge involves software, infrastructure,
-            processes or people — I look for ways to bring structure
+            processes or people - I look for ways to bring structure
             to complexity.
           </motion.p>
 
-          {/* Contact methods — minimal list */}
+          {/* Contact methods - minimal list */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -113,7 +113,7 @@ export function ContactSection() {
             })}
           </motion.div>
 
-          {/* Footer — signature line */}
+          {/* Footer - signature line */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -121,7 +121,7 @@ export function ContactSection() {
             className="mt-32 pt-10 border-t border-border-secondary flex items-end justify-between"
           >
             <span className="font-mono text-[10px] text-text-tertiary/30 tracking-[0.2em] uppercase">
-              © 2026 Tabash Sequeira
+              (c) 2026 Tabash Sequeira
             </span>
             <span className="font-mono text-[10px] text-text-tertiary/30 tracking-[0.2em] uppercase">
               Built with clarity, precision and purpose

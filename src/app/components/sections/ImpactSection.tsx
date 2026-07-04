@@ -20,7 +20,7 @@ const highlights = [
   },
   {
     area: 'AI-Assisted Engineering',
-    body: 'I use AI as an acceleration layer — not as a replacement for engineering judgment. Technical reasoning, testing, communication and production awareness remain the foundation.'
+    body: 'I use AI as an acceleration layer - not as a replacement for engineering judgment. Technical reasoning, testing, communication and production awareness remain the foundation.'
   }
 ]
 
@@ -93,12 +93,12 @@ export function ImpactSection() {
               style={{ fontSize: 'clamp(1rem, 1.4vw, 1.15rem)' }}
             >
               I do not define myself by one technology. I define myself by the ability
-              to understand how the pieces connect — and to build systems that reflect
+              to understand how the pieces connect - and to build systems that reflect
               that understanding.
             </p>
           </motion.div>
 
-          {/* Experience highlights — editorial rows */}
+          {/* Experience highlights - editorial rows */}
           <div className="mb-32">
             <div className="space-y-0 border-t border-border-secondary">
               {highlights.map((item, i) => (
@@ -107,21 +107,21 @@ export function ImpactSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.7 }}
-                  className="grid grid-cols-12 gap-8 py-10 border-b border-border-secondary/50"
+                  className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 py-10 border-b border-border-secondary/50"
                 >
-                  <div className="col-span-1 pt-1">
+                  <div className="md:col-span-1 pt-1">
                     <span className="font-mono text-[10px] text-text-tertiary/40 tracking-widest">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
-                  <div className="col-span-4">
+                  <div className="md:col-span-4">
                     <h3 className="font-display font-medium text-text-primary"
                       style={{ fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}
                     >
                       {item.area}
                     </h3>
                   </div>
-                  <div className="col-span-7">
+                  <div className="md:col-span-7">
                     <p className="text-text-secondary leading-relaxed"
                       style={{ fontSize: 'clamp(0.85rem, 1.1vw, 0.95rem)' }}
                     >
@@ -133,7 +133,7 @@ export function ImpactSection() {
             </div>
           </div>
 
-          {/* Work areas — sparse, no card grid */}
+          {/* Work areas - sparse, no card grid */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

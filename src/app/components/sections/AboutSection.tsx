@@ -5,12 +5,12 @@ const principles = [
   {
     index: '01',
     heading: 'Architecture before implementation',
-    body: 'Before building, I map the problem. Dependencies, edge cases, constraints, users, workflows and failure modes matter. A good architecture does not only tell you what to build — it also tells you what to avoid.'
+    body: 'Before building, I map the problem. Dependencies, edge cases, constraints, users, workflows and failure modes matter. A good architecture does not only tell you what to build - it also tells you what to avoid.'
   },
   {
     index: '02',
     heading: 'Clarity reduces friction',
-    body: 'Unclear systems create slow teams. Clear interfaces, useful documentation, predictable workflows and thoughtful UI decisions help people move faster. The goal is not to make things look complex — the goal is to make complexity easier to work with.'
+    body: 'Unclear systems create slow teams. Clear interfaces, useful documentation, predictable workflows and thoughtful UI decisions help people move faster. The goal is not to make things look complex - the goal is to make complexity easier to work with.'
   },
   {
     index: '03',
@@ -44,7 +44,7 @@ export function AboutSection() {
             </span>
           </div>
 
-          {/* Main thesis — full width, very large */}
+          {/* Main thesis - full width, very large */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -70,7 +70,7 @@ export function AboutSection() {
             </p>
           </motion.div>
 
-          {/* Three principles — editorial vertical stack */}
+          {/* Three principles - editorial vertical stack */}
           <div className="space-y-0">
             {principles.map((p, i) => (
               <motion.div
@@ -78,9 +78,9 @@ export function AboutSection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4 + i * 0.18, duration: 0.9 }}
-                className="grid grid-cols-12 gap-8 py-16 border-t border-border-secondary first:border-t-0"
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 py-16 border-t border-border-secondary first:border-t-0"
               >
-                {/* Large index number — left gutter */}
+                {/* Large index number - left gutter */}
                 <div className="col-span-2 pt-1">
                   <span className="font-display font-semibold text-text-primary/10 select-none"
                     style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', lineHeight: 1 }}
@@ -90,7 +90,7 @@ export function AboutSection() {
                 </div>
 
                 {/* Heading */}
-                <div className="col-span-4 pt-1">
+                <div className="md:col-span-4 pt-1">
                   <h3 className="font-display font-medium text-text-primary leading-snug"
                     style={{ fontSize: 'clamp(1.3rem, 2vw, 1.75rem)' }}
                   >
@@ -98,7 +98,7 @@ export function AboutSection() {
                   </h3>
                 </div>
 
-                {/* Body — right side, offset */}
+                {/* Body - right side, offset */}
                 <div className="col-span-6 flex items-start">
                   <p className="text-text-secondary leading-relaxed"
                     style={{ fontSize: 'clamp(0.9rem, 1.2vw, 1.05rem)' }}

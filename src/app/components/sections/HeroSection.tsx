@@ -19,7 +19,7 @@ export function HeroSection() {
 
       {/* Architectural drafting overlay - pure geometry, no labels */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
-        <svg width="100%" height="100%" className="absolute inset-0" preserveAspectRatio="none">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" className="absolute inset-0" preserveAspectRatio="none">
           <defs>
             <filter id="subtle-blur">
               <feGaussianBlur stdDeviation="0.4" />
@@ -65,7 +65,7 @@ export function HeroSection() {
 
           {/* Compass arc - bottom right area */}
           <motion.path
-            d="M 1224 880 A 120 120 0 0 0 1037 960"
+            d="M 85 88 A 12 12 0 0 0 72 96"
             fill="none"
             stroke="var(--brand-primary)"
             strokeWidth="0.6"

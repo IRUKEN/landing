@@ -12,7 +12,7 @@ const steps = [
     number: '02',
     name: 'Constraints',
     question: 'What cannot be ignored?',
-    body: 'Time, budget, compliance, legacy systems, team capacity and risk shape the solution space. Constraints are not obstacles — they are filters that remove weak options.'
+    body: 'Time, budget, compliance, legacy systems, team capacity and risk shape the solution space. Constraints are not obstacles - they are filters that remove weak options.'
   },
   {
     number: '03',
@@ -24,13 +24,13 @@ const steps = [
     number: '04',
     name: 'Execution',
     question: 'What can be built clearly and safely?',
-    body: 'The best implementation is the one that solves the problem without creating unnecessary complexity. Clarity and safety are not limitations — they are outcomes of good thinking.'
+    body: 'The best implementation is the one that solves the problem without creating unnecessary complexity. Clarity and safety are not limitations - they are outcomes of good thinking.'
   },
   {
     number: '05',
     name: 'Feedback',
     question: 'How do we know it works?',
-    body: 'Testing, observability, user feedback, documentation and iteration turn delivery into learning. Shipping is not the end — it is the beginning of understanding.'
+    body: 'Testing, observability, user feedback, documentation and iteration turn delivery into learning. Shipping is not the end - it is the beginning of understanding.'
   }
 ]
 
@@ -73,7 +73,7 @@ export function SystemsSection() {
             </h2>
           </motion.div>
 
-          {/* Steps — pure typographic, no cards */}
+          {/* Steps - pure typographic, no cards */}
           <div className="relative">
             {/* Thin vertical rule */}
             <motion.div
@@ -91,7 +91,7 @@ export function SystemsSection() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.6 + i * 0.14, duration: 0.8 }}
-                  className="grid grid-cols-12 gap-8 py-14 border-b border-border-secondary last:border-b-0 relative"
+                  className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 py-14 border-b border-border-secondary last:border-b-0 relative"
                 >
                   {/* Tick mark on the rule */}
                   <div
@@ -100,12 +100,12 @@ export function SystemsSection() {
                   />
 
                   {/* Step number */}
-                  <div className="col-span-1">
+                  <div className="md:col-span-1">
                     <span className="font-mono text-[11px] tracking-[0.15em] text-text-tertiary/60">{step.number}</span>
                   </div>
 
-                  {/* Step name — large */}
-                  <div className="col-span-3">
+                  {/* Step name - large */}
+                  <div className="md:col-span-3">
                     <h3 className="font-display font-medium text-text-primary"
                       style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.5rem)' }}
                     >
@@ -113,8 +113,8 @@ export function SystemsSection() {
                     </h3>
                   </div>
 
-                  {/* Question — medium, brand color */}
-                  <div className="col-span-3 flex items-center">
+                  {/* Question - medium, brand color */}
+                  <div className="md:col-span-3 flex items-center">
                     <p className="text-brand-primary/70 leading-snug"
                       style={{ fontSize: 'clamp(0.85rem, 1.1vw, 0.95rem)' }}
                     >
@@ -122,8 +122,8 @@ export function SystemsSection() {
                     </p>
                   </div>
 
-                  {/* Body — right */}
-                  <div className="col-span-5 flex items-center">
+                  {/* Body - right */}
+                  <div className="md:col-span-5 flex items-center">
                     <p className="text-text-secondary leading-relaxed"
                       style={{ fontSize: 'clamp(0.85rem, 1.1vw, 0.95rem)' }}
                     >
@@ -135,7 +135,7 @@ export function SystemsSection() {
             </div>
           </div>
 
-          {/* Closing statement — full width, silent, large */}
+          {/* Closing statement - full width, silent, large */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

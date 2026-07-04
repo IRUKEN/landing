@@ -8,7 +8,11 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Strategic vision"
+          alt="Abstract strategic systems visualization"
+          width="1536"
+          height="1024"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         {/* Gradient: left side darker for text legibility, right lets image breathe */}

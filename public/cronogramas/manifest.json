@@ -1,0 +1,40 @@
+{
+  "schedules": [
+    {
+      "id": "cronograma-01-ofimatica",
+      "name": "Ofimática",
+      "code": "SPH 219",
+      "file": "/cronogramas/cronograma-01-ofimatica.json"
+    },
+    {
+      "id": "cronograma-02-administracion-documentos-electronicos",
+      "name": "Administración de Documentos Electrónicos",
+      "code": "SPH 216",
+      "file": "/cronogramas/cronograma-02-administracion-documentos-electronicos.json"
+    },
+    {
+      "id": "cronograma-03-creatividad",
+      "name": "Teoría y Práctica de la Creatividad",
+      "code": "EGA102",
+      "file": "/cronogramas/cronograma-03-creatividad.json"
+    },
+    {
+      "id": "cronograma-04-produccion-documental",
+      "name": "Producción Documental Administrativa Legal",
+      "code": "SPH 215",
+      "file": "/cronogramas/cronograma-04-produccion-documental.json"
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial",
+      "name": "Inglés para la Gestión Comercial y Administrativa IV",
+      "code": "SPH 217",
+      "file": "/cronogramas/cronograma-05-ingles-gestion-comercial.json"
+    },
+    {
+      "id": "cronograma-06-redaccion-actas",
+      "name": "Redacción y Elaboración de Actas",
+      "code": "SPH 218",
+      "file": "/cronogramas/cronograma-06-redaccion-actas.json"
+    }
+  ]
+}

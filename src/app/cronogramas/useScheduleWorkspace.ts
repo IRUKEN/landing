@@ -12,14 +12,15 @@ import {
 
 const assignedSchedulesKey = 'erni-cronogramas-assigned';
 const customEventsKeyPrefix = 'erni-cronogramas-custom:';
-const scheduleSlots = [
-  { id: defaultScheduleId, label: 'Cronograma 01' },
-  { id: 'ofimatica-2026-02', label: 'Cronograma 02' },
-  { id: 'ofimatica-2026-03', label: 'Cronograma 03' },
-  { id: 'ofimatica-2026-04', label: 'Cronograma 04' },
-  { id: 'ofimatica-2026-05', label: 'Cronograma 05' },
-  { id: 'ofimatica-2026-06', label: 'Cronograma 06' },
-];
+
+type ScheduleManifest = {
+  schedules: {
+    id: string;
+    name: string;
+    code?: string;
+    file: string;
+  }[];
+};
 
 function customEventsKey(scheduleId: string) {
   return `${customEventsKeyPrefix}${scheduleId}`;
@@ -42,24 +43,51 @@ function prepareSlotData(data: ScheduleData, slotId: string, slotLabel: string):
   };
 }
 
-function createSchedules(templateData: ScheduleData, assignedSchedules: Record<string, ScheduleData> = {}) {
-  return scheduleSlots.map<ScheduleRecord>(slot => {
-    const data = assignedSchedules[slot.id] ?? templateData;
+function scheduleLabel(code: string | undefined, name: string) {
+  return code ? `${code} - ${name}` : name;
+}
+
+function createSchedules(defaultSchedules: ScheduleRecord[], assignedSchedules: Record<string, ScheduleData> = {}) {
+  return defaultSchedules.map<ScheduleRecord>(schedule => {
+    const data = assignedSchedules[schedule.id] ?? schedule.data;
+    const baseLabel = schedule.slotLabel ?? schedule.name;
     return {
-      id: slot.id,
-      name: `${slot.label} - ${scheduleDisplayName(data)}`,
+      ...schedule,
+      name: scheduleDisplayName(data),
       readonly: true,
-      assigned: Boolean(assignedSchedules[slot.id]),
-      slotLabel: slot.label,
-      data: prepareSlotData(data, slot.id, slot.label),
+      assigned: Boolean(assignedSchedules[schedule.id]),
+      slotLabel: baseLabel,
+      data: prepareSlotData(data, schedule.id, baseLabel),
     };
   });
 }
 
+async function loadDefaultSchedules(): Promise<ScheduleRecord[]> {
+  const manifest = (await fetch('/cronogramas/manifest.json').then(response => response.json())) as ScheduleManifest;
+
+  return Promise.all(
+    manifest.schedules.map(async entry => {
+      const data = validateImportedSchedule(
+        repairMojibake(await fetch(entry.file).then(response => response.json())),
+      );
+      const label = scheduleLabel(entry.code, entry.name);
+
+      return {
+        id: entry.id,
+        name: scheduleDisplayName(data),
+        readonly: true,
+        assigned: false,
+        slotLabel: label,
+        data,
+      };
+    }),
+  );
+}
+
 export function useScheduleWorkspace() {
-  const [templateData, setTemplateData] = useState<ScheduleData | null>(null);
+  const [defaultSchedules, setDefaultSchedules] = useState<ScheduleRecord[]>([]);
   const [schedules, setSchedules] = useState<ScheduleRecord[]>([]);
-  const [selectedScheduleId, setSelectedScheduleId] = useState(defaultScheduleId);
+  const [selectedScheduleId, setSelectedScheduleId] = useState('cronograma-01-ofimatica');
   const [customEvents, setCustomEvents] = useState<ScheduleEvent[]>([]);
   const [filter, setFilter] = useState('Todos');
   const [query, setQuery] = useState('');
@@ -67,15 +95,14 @@ export function useScheduleWorkspace() {
   const [importError, setImportError] = useState('');
 
   useEffect(() => {
-    fetch('/cronogramas/events.json')
-      .then(response => response.json())
-      .then(raw => {
-        const data = repairMojibake(raw) as ScheduleData;
+    loadDefaultSchedules()
+      .then(defaults => {
         const assigned = readJson<Record<string, ScheduleData>>(assignedSchedulesKey, {});
-        setTemplateData(data);
-        setSchedules(createSchedules(data, assigned));
+        setDefaultSchedules(defaults);
+        setSchedules(createSchedules(defaults, assigned));
+        setSelectedScheduleId(defaults[0]?.id ?? defaultScheduleId);
       })
-      .catch(() => setImportError('No se pudo cargar el cronograma base.'));
+      .catch(() => setImportError('No se pudieron cargar los cronogramas publicados.'));
   }, []);
 
   const activeSchedule = useMemo(
@@ -132,7 +159,7 @@ export function useScheduleWorkspace() {
   };
 
   const assignScheduleData = async (scheduleId: string, file: File) => {
-    if (!templateData) return;
+    if (!defaultSchedules.length) return;
     setImportError('');
 
     try {
@@ -140,7 +167,7 @@ export function useScheduleWorkspace() {
       const assigned = readJson<Record<string, ScheduleData>>(assignedSchedulesKey, {});
       const updatedAssigned = { ...assigned, [scheduleId]: data };
       localStorage.setItem(assignedSchedulesKey, JSON.stringify(updatedAssigned));
-      setSchedules(createSchedules(templateData, updatedAssigned));
+      setSchedules(createSchedules(defaultSchedules, updatedAssigned));
       selectSchedule(scheduleId);
     } catch (error) {
       setImportError(error instanceof Error ? error.message : 'No se pudo asignar el cronograma.');
@@ -148,12 +175,12 @@ export function useScheduleWorkspace() {
   };
 
   const resetAssignedSchedule = (scheduleId: string) => {
-    if (!templateData) return;
+    if (!defaultSchedules.length) return;
     const assigned = readJson<Record<string, ScheduleData>>(assignedSchedulesKey, {});
     delete assigned[scheduleId];
     localStorage.setItem(assignedSchedulesKey, JSON.stringify(assigned));
     localStorage.removeItem(customEventsKey(scheduleId));
-    setSchedules(createSchedules(templateData, assigned));
+    setSchedules(createSchedules(defaultSchedules, assigned));
     selectSchedule(scheduleId);
   };
 

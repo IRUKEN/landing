@@ -1,0 +1,264 @@
+{
+  "source": "SPH 217 Ingles para la gestion comercial y administrativa IV.pdf",
+  "generatedFrom": "Programa oficial del curso en PDF",
+  "course": {
+    "NOMBRE DEL CURSO": "Inglés para la Gestión Comercial y Administrativa IV",
+    "CÓDIGO DE CURSO": "SPH 217",
+    "PERIODO LECTIVO": "II ciclo 2026",
+    "MODALIDAD": "Presencial con apoyo tecnológico"
+  },
+  "evaluations": [
+    {
+      "name": "Oral presentation 1",
+      "percentage": "15%"
+    },
+    {
+      "name": "Written presentation 1",
+      "percentage": "15%"
+    },
+    {
+      "name": "Integrated project and oral presentation",
+      "percentage": "30%"
+    },
+    {
+      "name": "Class work, discussions and virtual activities",
+      "percentage": "40%"
+    }
+  ],
+  "events": [
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-1",
+      "session": 1,
+      "dateLabel": "Del 20 al 25 de julio",
+      "start": "2026-07-20",
+      "end": "2026-07-25",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Course introduction and professional communication review.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-2",
+      "session": 2,
+      "dateLabel": "Del 27 de julio al 01 de agosto",
+      "start": "2026-07-27",
+      "end": "2026-08-01",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Business etiquette and office communication.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-3",
+      "session": 3,
+      "dateLabel": "Del 03 al 08 de agosto",
+      "start": "2026-08-03",
+      "end": "2026-08-08",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Modal verbs for rules, advice and obligations.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-4",
+      "session": 4,
+      "dateLabel": "Del 10 al 15 de agosto",
+      "start": "2026-08-10",
+      "end": "2026-08-15",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Speaking about values, customs and human rights.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-5",
+      "session": 5,
+      "dateLabel": "Del 17 al 22 de agosto",
+      "start": "2026-08-17",
+      "end": "2026-08-22",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Oral presentation practice.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-6",
+      "session": 6,
+      "dateLabel": "Del 24 al 29 de agosto",
+      "start": "2026-08-24",
+      "end": "2026-08-29",
+      "type": "Virtual asincrónica",
+      "kind": "Virtual",
+      "topic": "Virtual class activities and applied grammar.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-7",
+      "session": 7,
+      "dateLabel": "Del 31 de agosto al 05 de setiembre",
+      "start": "2026-08-31",
+      "end": "2026-09-05",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Podcasts, infographics and listening practice.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-8",
+      "session": 8,
+      "dateLabel": "Del 07 al 12 de setiembre",
+      "start": "2026-09-07",
+      "end": "2026-09-12",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Business letters and administrative writing.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-9",
+      "session": 9,
+      "dateLabel": "Del 14 al 19 de setiembre",
+      "start": "2026-09-14",
+      "end": "2026-09-19",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Comparatives, superlatives and professional descriptions.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-10",
+      "session": 10,
+      "dateLabel": "Del 21 al 26 de setiembre",
+      "start": "2026-09-21",
+      "end": "2026-09-26",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Written presentation practice.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-11",
+      "session": 11,
+      "dateLabel": "Del 28 de setiembre al 03 de octubre",
+      "start": "2026-09-28",
+      "end": "2026-10-03",
+      "type": "Presencial",
+      "kind": "Práctica",
+      "topic": "Group discussions and teamwork.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-12",
+      "session": 12,
+      "dateLabel": "Del 05 al 10 de octubre",
+      "start": "2026-10-05",
+      "end": "2026-10-10",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Professional attitude and responsibility.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-13",
+      "session": 13,
+      "dateLabel": "Del 12 al 17 de octubre",
+      "start": "2026-10-12",
+      "end": "2026-10-17",
+      "type": "Virtual asincrónica",
+      "kind": "Proyecto",
+      "topic": "Integrated project preparation.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-14",
+      "session": 14,
+      "dateLabel": "Del 19 al 24 de octubre",
+      "start": "2026-10-19",
+      "end": "2026-10-24",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Final oral presentation.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-15",
+      "session": 15,
+      "dateLabel": "Del 26 al 31 de octubre",
+      "start": "2026-10-26",
+      "end": "2026-10-31",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Semana U.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-16",
+      "session": 16,
+      "dateLabel": "Del 02 al 07 de noviembre",
+      "start": "2026-11-02",
+      "end": "2026-11-07",
+      "type": "Presencial",
+      "kind": "Proyecto",
+      "topic": "Project delivery.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-17",
+      "session": 17,
+      "dateLabel": "Del 09 al 14 de noviembre",
+      "start": "2026-11-09",
+      "end": "2026-11-14",
+      "type": "Presencial",
+      "kind": "Prueba",
+      "topic": "Final evaluation.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-05-ingles-gestion-comercial-session-18",
+      "session": 18,
+      "dateLabel": "Del 16 al 21 de noviembre",
+      "start": "2026-11-16",
+      "end": "2026-11-21",
+      "type": "Presencial",
+      "kind": "Cierre",
+      "topic": "Grade delivery.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "source": "SPH 215 Produccion documental Administrativa Legal.pdf",
+  "generatedFrom": "Programa oficial del curso en PDF",
+  "course": {
+    "NOMBRE DEL CURSO": "Producción Documental Administrativa Legal",
+    "CÓDIGO DE CURSO": "SPH 215",
+    "PERIODO LECTIVO": "II ciclo 2026",
+    "MODALIDAD": "Presencial con apoyo tecnológico"
+  },
+  "evaluations": [
+    {
+      "name": "Estudios de caso, foros y prácticas en clase",
+      "percentage": "25%"
+    },
+    {
+      "name": "Pruebas de velocidad y precisión",
+      "percentage": "15%"
+    },
+    {
+      "name": "Análisis documental",
+      "percentage": "10%"
+    },
+    {
+      "name": "Prueba de ejecución",
+      "percentage": "25%"
+    },
+    {
+      "name": "Simulación de sesión de órgano colegiado",
+      "percentage": "25%"
+    }
+  ],
+  "events": [
+    {
+      "id": "cronograma-04-produccion-documental-session-1",
+      "session": 1,
+      "dateLabel": "Del 20 al 25 de julio",
+      "start": "2026-07-20",
+      "end": "2026-07-25",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Programa del curso y fundamentos de producción documental legal.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-2",
+      "session": 2,
+      "dateLabel": "Del 27 de julio al 01 de agosto",
+      "start": "2026-07-27",
+      "end": "2026-08-01",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Órganos colegiados y documentos conexos.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-3",
+      "session": 3,
+      "dateLabel": "Del 03 al 08 de agosto",
+      "start": "2026-08-03",
+      "end": "2026-08-08",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Convocatoria, orden del día y actas.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-4",
+      "session": 4,
+      "dateLabel": "Del 10 al 15 de agosto",
+      "start": "2026-08-10",
+      "end": "2026-08-15",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Transcripción de acuerdos y control de acuerdos.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-5",
+      "session": 5,
+      "dateLabel": "Del 17 al 22 de agosto",
+      "start": "2026-08-17",
+      "end": "2026-08-22",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Redacción administrativa legal.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-6",
+      "session": 6,
+      "dateLabel": "Del 24 al 29 de agosto",
+      "start": "2026-08-24",
+      "end": "2026-08-29",
+      "type": "Virtual asincrónica",
+      "kind": "Virtual",
+      "topic": "Estudio de caso sobre actas elaboradas.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-7",
+      "session": 7,
+      "dateLabel": "Del 31 de agosto al 05 de setiembre",
+      "start": "2026-08-31",
+      "end": "2026-09-05",
+      "type": "Presencial",
+      "kind": "Práctica",
+      "topic": "Práctica de elaboración de actas.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-8",
+      "session": 8,
+      "dateLabel": "Del 07 al 12 de setiembre",
+      "start": "2026-09-07",
+      "end": "2026-09-12",
+      "type": "Presencial",
+      "kind": "Prueba",
+      "topic": "Prueba de velocidad y precisión.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-9",
+      "session": 9,
+      "dateLabel": "Del 14 al 19 de setiembre",
+      "start": "2026-09-14",
+      "end": "2026-09-19",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Análisis documental.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-10",
+      "session": 10,
+      "dateLabel": "Del 21 al 26 de setiembre",
+      "start": "2026-09-21",
+      "end": "2026-09-26",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Convocatoria y simulación de órgano colegiado.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-11",
+      "session": 11,
+      "dateLabel": "Del 28 de setiembre al 03 de octubre",
+      "start": "2026-09-28",
+      "end": "2026-10-03",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Acta de sesión ordinaria.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-12",
+      "session": 12,
+      "dateLabel": "Del 05 al 10 de octubre",
+      "start": "2026-10-05",
+      "end": "2026-10-10",
+      "type": "Presencial",
+      "kind": "Práctica",
+      "topic": "Práctica de documentos administrativos legales.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-13",
+      "session": 13,
+      "dateLabel": "Del 12 al 17 de octubre",
+      "start": "2026-10-12",
+      "end": "2026-10-17",
+      "type": "Virtual asincrónica",
+      "kind": "Virtual",
+      "topic": "Foro y retroalimentación.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-14",
+      "session": 14,
+      "dateLabel": "Del 19 al 24 de octubre",
+      "start": "2026-10-19",
+      "end": "2026-10-24",
+      "type": "Presencial",
+      "kind": "Prueba",
+      "topic": "Prueba de ejecución.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-15",
+      "session": 15,
+      "dateLabel": "Del 26 al 31 de octubre",
+      "start": "2026-10-26",
+      "end": "2026-10-31",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Semana U.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-16",
+      "session": 16,
+      "dateLabel": "Del 02 al 07 de noviembre",
+      "start": "2026-11-02",
+      "end": "2026-11-07",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Simulación de sesión de órgano colegiado.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-17",
+      "session": 17,
+      "dateLabel": "Del 09 al 14 de noviembre",
+      "start": "2026-11-09",
+      "end": "2026-11-14",
+      "type": "Presencial",
+      "kind": "Clase",
+      "topic": "Entrega de convocatoria, acta y transcripción.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    },
+    {
+      "id": "cronograma-04-produccion-documental-session-18",
+      "session": 18,
+      "dateLabel": "Del 16 al 21 de noviembre",
+      "start": "2026-11-16",
+      "end": "2026-11-21",
+      "type": "Presencial",
+      "kind": "Cierre",
+      "topic": "Entrega de promedios.",
+      "activity": "Desarrollo, práctica guiada y seguimiento de los contenidos programados.",
+      "resources": "Aula virtual, lecturas, presentaciones, computadora y recursos del curso.",
+      "holiday": ""
+    }
+  ]
+}

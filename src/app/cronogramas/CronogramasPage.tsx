@@ -31,7 +31,7 @@ export function CronogramasPage() {
           <div>
             <p className="crono-eyebrow">Universidad Nacional · II ciclo 2026</p>
             <h1>Centro de cronogramas</h1>
-            <p className="crono-lead">Seis espacios locales para asignar cronogramas, revisar evaluaciones y navegar eventos por curso.</p>
+            <p className="crono-lead">Seis programas disponibles para revisar evaluaciones, prácticas y eventos sin mezclar datos entre cursos.</p>
             <div className="crono-actions-row">
               <a className="crono-button primary" href="#cronogramas"><CalendarDays size={18} />Ver cronogramas</a>
               <button className="crono-button secondary" onClick={() => workspace.setFormOpen(true)}>Agregar evento</button>
@@ -56,10 +56,10 @@ export function CronogramasPage() {
         <div className="crono-container">
           <div className="crono-section-head">
             <div>
-              <p className="crono-eyebrow">Espacios separados</p>
+              <p className="crono-eyebrow">Programas separados</p>
               <h2>Mis cronogramas</h2>
             </div>
-            <p>Asigna un JSON procesado a cada espacio para comparar cursos sin mezclar eventos.</p>
+            <p>Escoge un programa para ver solamente la evaluación y la agenda correspondiente a ese cronograma.</p>
           </div>
 
           <div className="crono-dashboard">
@@ -67,7 +67,7 @@ export function CronogramasPage() {
               {workspace.schedules.map(schedule => (
                 <article className={`crono-slot ${workspace.selectedScheduleId === schedule.id ? 'active' : ''}`} key={schedule.id}>
                   <button type="button" onClick={() => workspace.setSelectedScheduleId(schedule.id)}>
-                    <span>{schedule.assigned ? 'Asignado' : 'Plantilla'}</span>
+                    <span>{schedule.assigned ? 'Personalizado' : 'Publicado'}</span>
                     <strong>{schedule.name}</strong>
                     <small>{schedule.data.events.length} eventos · {schedule.data.evaluations.length} evaluaciones</small>
                   </button>

@@ -1,6 +1,6 @@
 ﻿import type { ScheduleData, ScheduleEvent, ScheduleSummary } from './types';
 
-export const defaultScheduleId = 'ofimatica-2026-01';
+export const defaultScheduleId = 'cronograma-01-ofimatica';
 export const filterOptions = ['Todos', 'Prueba', 'Práctica', 'Proyecto', 'Virtual', 'Clase', 'Cierre'];
 export const kindClass: Record<string, string> = {
   Prueba: 'danger',

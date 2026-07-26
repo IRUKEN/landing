@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 
@@ -8,6 +8,7 @@ const navItems = [
   { id: 'impact', label: 'Execution' },
   { id: 'systems', label: 'Framework' },
   { id: 'philosophy', label: 'Philosophy' },
+  { href: '/cronogramas', label: 'Cronogramas' },
   { id: 'contact', label: 'Connect' }
 ]
 
@@ -16,14 +17,15 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    const observers = navItems.map(({ id }) => {
-      const element = document.getElementById(id)
+    const observers = navItems.map(item => {
+      if (!('id' in item)) return null
+      const element = document.getElementById(item.id)
       if (!element) return null
 
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setActiveSection(id)
+            setActiveSection(item.id)
           }
         },
         { threshold: 0.5, rootMargin: '-100px 0px -50% 0px' }
@@ -78,28 +80,38 @@ export function Navigation() {
             </div>
 
             <div className="hidden md:flex items-center gap-1">
-              {navItems.map(({ id, label }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className={`
-                    px-4 py-2 text-label-sm transition-all duration-200 font-medium
-                    ${activeSection === id
-                      ? 'text-brand-primary'
-                      : 'text-text-secondary hover:text-text-primary'
-                    }
-                  `}
-                >
-                  {label}
-                  {activeSection === id && (
-                    <motion.div
-                      layoutId="activeSection"
-                      className="h-px bg-brand-primary mt-1"
-                      initial={false}
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </button>
+              {navItems.map(item => (
+                'href' in item ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="px-4 py-2 text-label-sm transition-all duration-200 font-medium text-text-secondary hover:text-text-primary"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`
+                      px-4 py-2 text-label-sm transition-all duration-200 font-medium
+                      ${activeSection === item.id
+                        ? 'text-brand-primary'
+                        : 'text-text-secondary hover:text-text-primary'
+                      }
+                    `}
+                  >
+                    {item.label}
+                    {activeSection === item.id && (
+                      <motion.div
+                        layoutId="activeSection"
+                        className="h-px bg-brand-primary mt-1"
+                        initial={false}
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </button>
+                )
               ))}
             </div>
 
@@ -125,23 +137,35 @@ export function Navigation() {
             className="md:hidden border-t border-border-secondary bg-surface-bg/95"
           >
             <div className="px-5 py-3">
-              {navItems.map(({ id, label }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className={`
-                    flex w-full items-center justify-between py-4 text-left font-medium transition-colors
-                    ${activeSection === id
-                      ? 'text-brand-primary'
-                      : 'text-text-secondary hover:text-text-primary'
-                    }
-                  `}
-                >
-                  <span>{label}</span>
-                  <span className="font-mono text-[10px] text-text-tertiary/50">
-                    {id.toUpperCase()}
-                  </span>
-                </button>
+              {navItems.map(item => (
+                'href' in item ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="flex w-full items-center justify-between py-4 text-left font-medium text-text-secondary hover:text-text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-mono text-[10px] text-text-tertiary/50">LINK</span>
+                  </a>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`
+                      flex w-full items-center justify-between py-4 text-left font-medium transition-colors
+                      ${activeSection === item.id
+                        ? 'text-brand-primary'
+                        : 'text-text-secondary hover:text-text-primary'
+                      }
+                    `}
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-mono text-[10px] text-text-tertiary/50">
+                      {item.id.toUpperCase()}
+                    </span>
+                  </button>
+                )
               ))}
             </div>
           </motion.div>

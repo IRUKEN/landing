@@ -8,6 +8,7 @@ import { ContactSection } from './components/sections/ContactSection'
 import { CronogramasPage } from './cronogramas/CronogramasPage'
 import { BlogPage } from './blog/BlogPage'
 import { ArticlePage } from './blog/ArticlePage'
+import { LegalPage } from './legal/LegalPage'
 
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/'
@@ -24,15 +25,21 @@ export default function App() {
     return <ArticlePage slug={path.split('/').filter(Boolean)[1] ?? ''} />
   }
 
+  if (path === '/legal/terms') return <LegalPage document="terms" />
+  if (path === '/legal/privacy') return <LegalPage document="privacy" />
+  if (path === '/legal/cookies') return <LegalPage document="cookies" />
+
   return (
     <div className="dark min-h-screen bg-brand-tertiary text-text-primary">
       <PageLayout>
-        <HeroSection />
-        <AboutSection />
-        <ImpactSection />
-        <SystemsSection />
-        <PhilosophySection />
-        <ContactSection />
+        <main id="main-content">
+          <HeroSection />
+          <AboutSection />
+          <ImpactSection />
+          <SystemsSection />
+          <PhilosophySection />
+          <ContactSection />
+        </main>
       </PageLayout>
     </div>
   )

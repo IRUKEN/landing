@@ -16,7 +16,7 @@ const navItems = [
 
 export function Navigation() {
   const isHomePage = window.location.pathname === '/'
-  const isBlogPage = window.location.pathname.startsWith('/blog')
+  const supportsLanguage = window.location.pathname.startsWith('/blog') || window.location.pathname.startsWith('/legal')
   const { language, toggleLanguage } = useLanguage()
   const [activeSection, setActiveSection] = useState('hero')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -126,7 +126,7 @@ export function Navigation() {
                   </a>
                 )
               ))}
-              {isBlogPage && (
+              {supportsLanguage && (
                 <button
                   type="button"
                   onClick={toggleLanguage}
@@ -201,7 +201,7 @@ export function Navigation() {
                   </a>
                 )
               ))}
-              {isBlogPage && (
+              {supportsLanguage && (
                 <button
                   type="button"
                   onClick={toggleLanguage}

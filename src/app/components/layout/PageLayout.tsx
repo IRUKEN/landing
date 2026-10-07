@@ -1,4 +1,6 @@
 import { Navigation } from './Navigation'
+import { PrivacyNotice } from './PrivacyNotice'
+import { SiteFooter } from './SiteFooter'
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -6,9 +8,11 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
       <Navigation />
 
       {/* Main content with top padding for fixed nav */}
-      <main className="pt-20">
+      <div className="pt-20">
         {children}
-      </main>
+      </div>
+      <SiteFooter />
+      <PrivacyNotice />
     </div>
   )
 }

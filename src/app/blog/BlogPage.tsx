@@ -106,12 +106,6 @@ export function BlogPage() {
           </section>
         </main>
 
-        <footer className="border-t border-border-primary">
-          <div className="mx-auto flex max-w-[1400px] flex-col gap-3 px-5 py-8 text-sm text-text-tertiary md:flex-row md:items-center md:justify-between md:px-8">
-            <p>© 2026 Erni Tabash Sequeira</p>
-            <p className="font-mono text-xs">{t.footerTopics}</p>
-          </div>
-        </footer>
       </PageLayout>
     </div>
   )

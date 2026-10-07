@@ -1,6 +1,7 @@
 ﻿import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
-import { Menu, X } from 'lucide-react'
+import { Globe2, Menu, X } from 'lucide-react'
+import { useLanguage } from '../../i18n/LanguageProvider'
 
 const navItems = [
   { id: 'hero', label: 'Home' },
@@ -8,11 +9,15 @@ const navItems = [
   { id: 'impact', label: 'Execution' },
   { id: 'systems', label: 'Framework' },
   { id: 'philosophy', label: 'Philosophy' },
+  { href: '/blog', label: 'Blog' },
   { href: '/cronogramas', label: 'Cronogramas' },
   { id: 'contact', label: 'Connect' }
 ]
 
 export function Navigation() {
+  const isHomePage = window.location.pathname === '/'
+  const isBlogPage = window.location.pathname.startsWith('/blog')
+  const { language, toggleLanguage } = useLanguage()
   const [activeSection, setActiveSection] = useState('hero')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -89,7 +94,7 @@ export function Navigation() {
                   >
                     {item.label}
                   </a>
-                ) : (
+                ) : isHomePage ? (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
@@ -111,8 +116,27 @@ export function Navigation() {
                       />
                     )}
                   </button>
+                ) : (
+                  <a
+                    key={item.id}
+                    href={`/#${item.id}`}
+                    className="px-4 py-2 text-label-sm transition-all duration-200 font-medium text-text-secondary hover:text-text-primary"
+                  >
+                    {item.label}
+                  </a>
                 )
               ))}
+              {isBlogPage && (
+                <button
+                  type="button"
+                  onClick={toggleLanguage}
+                  aria-label={language === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish'}
+                  className="ml-2 inline-flex min-h-11 items-center gap-2 border border-border-primary px-3 font-mono text-[11px] text-text-secondary transition-colors hover:border-brand-primary/60 hover:text-brand-primary"
+                >
+                  <Globe2 size={15} aria-hidden="true" />
+                  {language === 'es' ? 'EN' : 'ES'}
+                </button>
+              )}
             </div>
 
             <button
@@ -148,7 +172,7 @@ export function Navigation() {
                     <span>{item.label}</span>
                     <span className="font-mono text-[10px] text-text-tertiary/50">LINK</span>
                   </a>
-                ) : (
+                ) : isHomePage ? (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
@@ -165,8 +189,29 @@ export function Navigation() {
                       {item.id.toUpperCase()}
                     </span>
                   </button>
+                ) : (
+                  <a
+                    key={item.id}
+                    href={`/#${item.id}`}
+                    className="flex w-full items-center justify-between py-4 text-left font-medium text-text-secondary hover:text-text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-mono text-[10px] text-text-tertiary/50">{item.id.toUpperCase()}</span>
+                  </a>
                 )
               ))}
+              {isBlogPage && (
+                <button
+                  type="button"
+                  onClick={toggleLanguage}
+                  className="flex min-h-12 w-full items-center justify-between border-t border-border-secondary py-4 text-left font-medium text-text-secondary hover:text-brand-primary"
+                  aria-label={language === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish'}
+                >
+                  <span className="inline-flex items-center gap-2"><Globe2 size={17} />{language === 'es' ? 'English' : 'Español'}</span>
+                  <span className="font-mono text-[10px] text-brand-primary">{language === 'es' ? 'EN' : 'ES'}</span>
+                </button>
+              )}
             </div>
           </motion.div>
         )}

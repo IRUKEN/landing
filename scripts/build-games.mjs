@@ -25,6 +25,21 @@ function findBrowserOutput(root) {
   return output
 }
 
+function configureCspCompatibleStyles(sourceRoot) {
+  const angularConfigPath = join(sourceRoot, 'angular.json')
+  const angularConfig = JSON.parse(readFileSync(angularConfigPath, 'utf8'))
+  const projectName = angularConfig.defaultProject ?? Object.keys(angularConfig.projects)[0]
+  const production = angularConfig.projects[projectName].architect.build.configurations.production
+
+  production.optimization = {
+    scripts: true,
+    styles: { minify: true, inlineCritical: false },
+    fonts: true,
+  }
+
+  writeFileSync(angularConfigPath, `${JSON.stringify(angularConfig, null, 2)}\n`)
+}
+
 function rewriteAssetPaths(directory) {
   const textExtensions = new Set(['.css', '.html', '.js', '.json', '.scss', '.ts', '.webmanifest'])
 
@@ -59,6 +74,7 @@ try {
   }
 
   rewriteAssetPaths(join(source, 'src'))
+  configureCspCompatibleStyles(source)
   run(npmCommand, ['ci'], source)
   run(npmCommand, ['run', 'build', '--', '--base-href', '/games/'], source)
 

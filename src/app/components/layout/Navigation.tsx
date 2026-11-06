@@ -11,6 +11,7 @@ const navItems = [
   { id: 'philosophy', label: 'Philosophy' },
   { href: '/blog', label: 'Blog' },
   { href: '/cronogramas', label: 'Cronogramas' },
+  { href: '/games/', label: 'Games' },
   { id: 'contact', label: 'Connect' }
 ]
 

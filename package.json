@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "build:games": "node scripts/build-games.mjs",
         "dev": "vite",
         "preview": "vite preview"
     },
